@@ -625,8 +625,6 @@
 		pointToLayer: function (feature, latlng) {
 			if (feature.properties.Group == 'Corallian'){
 			    return L.marker(latlng, {icon: corallianIcon})
-			}else if(feature.properties.Group == 'Wealden'){
-				return L.marker(latlng, {icon: wealdenIcon})
 			}else if(feature.properties.Member == 'Stair Hole'){
 				return L.marker(latlng, {icon: stairHoleIcon})
 			}else if(feature.properties.Member == 'Portland Freestone'){
@@ -641,6 +639,8 @@
 				return L.marker(latlng, {icon: greenBlueIcon})
 			}else if(feature.properties.Group == 'Chalk'){
 				return L.marker(latlng, {icon: greenIcon})
+			}else if(feature.properties.Group == 'Wealden'){
+				return L.marker(latlng, {icon: wealdenIcon})
 			}else if(feature.properties.Group == 'Inferior Oolite'){
 				return L.marker(latlng, {icon: orangeIcon})
 			}else if(feature.properties.Formation == 'Bridport Sand'){
