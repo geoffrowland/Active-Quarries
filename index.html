@@ -581,6 +581,14 @@
 	    popupAnchor: [1, -34],
 	    shadowSize: [41, 41]
     });
+    var wealdenIcon = L.icon({
+	    iconUrl: 'img/marker-icon-2x-wealden.png',
+	    shadowUrl: 'img/marker-shadow.png',
+	    iconSize: [25, 41],
+	    iconAnchor: [12, 41],
+	    popupAnchor: [1, -34],
+	    shadowSize: [41, 41]
+    });
     var stairHoleIcon = L.icon({
 	    iconUrl: 'img/marker-icon-2x-stair-hole.png',
 	    shadowUrl: 'img/marker-shadow.png',
@@ -617,6 +625,8 @@
 		pointToLayer: function (feature, latlng) {
 			if (feature.properties.Group == 'Corallian'){
 			    return L.marker(latlng, {icon: corallianIcon})
+			}else if(feature.properties.Group == 'Wealden'){
+				return L.marker(latlng, {icon: wealdenIcon})
 			}else if(feature.properties.Member == 'Stair Hole'){
 				return L.marker(latlng, {icon: stairHoleIcon})
 			}else if(feature.properties.Member == 'Portland Freestone'){
